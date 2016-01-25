@@ -1,1 +1,5 @@
 /temp
+.project
+/app/.m2
+/app/.project
+/app/temp
