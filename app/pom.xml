@@ -43,6 +43,18 @@
 				<configuration>
 					<executable>java</executable>
 					<arguments>
+						<argument>-Denv=develop</argument>
+						<!--
+						<argument>-Dendpoint.name=client-endpoint</argument>
+						<argument>-Dremote.connectionprovider.create.options.org.xnio.Options.SSL_ENABLED=false</argument>
+						<argument>-Dremote.connections=default</argument>
+						<argument>-Dremote.connection.default.host=localhost</argument>
+						<argument>-Dremote.connection.default.port=4447</argument>
+						<argument>-Dremote.connection.default.connect.options.org.xnio.Options.SASL_POLICY_NOANONYMOUS=false</argument>
+						<argument>-Dremote.connection.default.username=bbd.dev</argument>
+						<argument>-Dremote.connection.default.password=devel-2014</argument>
+						-->
+						<argument>-Dproject.version=${project.version}</argument>
 						<argument>-classpath</argument>
 						<classpath />
 						<argument>com.bbd.tpa2.tpa2client.main.Main</argument>
