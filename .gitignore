@@ -4,6 +4,7 @@
 /app/bin
 /app/.m2
 /app/.project
+/app/pom.xml.versionsBackup
 /app/temp
 /app/alpha
 /app/beta
