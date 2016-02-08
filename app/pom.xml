@@ -43,17 +43,6 @@
 				<configuration>
 					<executable>java</executable>
 					<arguments>
-						<argument>-Denv=develop</argument>
-						<!--
-						<argument>-Dendpoint.name=client-endpoint</argument>
-						<argument>-Dremote.connectionprovider.create.options.org.xnio.Options.SSL_ENABLED=false</argument>
-						<argument>-Dremote.connections=default</argument>
-						<argument>-Dremote.connection.default.host=localhost</argument>
-						<argument>-Dremote.connection.default.port=4447</argument>
-						<argument>-Dremote.connection.default.connect.options.org.xnio.Options.SASL_POLICY_NOANONYMOUS=false</argument>
-						<argument>-Dremote.connection.default.username=bbd.dev</argument>
-						<argument>-Dremote.connection.default.password=devel-2014</argument>
-						-->
 						<argument>-Dproject.version=${project.version}</argument>
 						<argument>-classpath</argument>
 						<classpath />
@@ -63,16 +52,81 @@
 			</plugin>
 		</plugins>
 	</build>
-	<repositories>
-		<repository>
-			<id>libs-snapshot-local</id>
-      <name>libs-snapshot-local</name>
-      <url>http://192.168.99.100:8081/artifactory/list/libs-snapshot-local/</url>
-		</repository>
-		<repository>
-			<id>ext-release-local</id>
-      <name>ext-release-local</name>
-      <url>http://192.168.99.100:8081/artifactory/list/ext-release-local/</url>
-		</repository>
-	</repositories>
+	<profiles>
+		<profile>
+			<id>alpha</id>
+			<repositories>
+				<repository>
+					<id>libs-alpha-snapshot-local</id>
+					<name>libs-alpha-snapshot-local</name>
+					<url>http://192.168.99.100:8081/artifactory/list/libs-alpha-snapshot-local/</url>
+				</repository>
+				<repository>
+					<id>ext-release-local</id>
+					<name>ext-release-local</name>
+					<url>http://192.168.99.100:8081/artifactory/list/ext-release-local/</url>
+				</repository>
+			</repositories>
+		</profile>
+		<profile>
+			<id>beta</id>
+			<repositories>
+				<repository>
+					<id>libs-beta-snapshot-local</id>
+					<name>libs-beta-snapshot-local</name>
+					<url>http://192.168.99.100:8081/artifactory/list/libs-beta-snapshot-local/</url>
+				</repository>
+				<repository>
+					<id>ext-release-local</id>
+					<name>ext-release-local</name>
+					<url>http://192.168.99.100:8081/artifactory/list/ext-release-local/</url>
+				</repository>
+			</repositories>
+		</profile>
+		<profile>
+			<id>rc</id>
+			<repositories>
+				<repository>
+					<id>libs-rc-snapshot-local</id>
+					<name>libs-rc-snapshot-local</name>
+					<url>http://192.168.99.100:8081/artifactory/list/libs-rc-snapshot-local/</url>
+				</repository>
+				<repository>
+					<id>ext-release-local</id>
+					<name>ext-release-local</name>
+					<url>http://192.168.99.100:8081/artifactory/list/ext-release-local/</url>
+				</repository>
+			</repositories>
+		</profile>
+		<profile>
+			<id>critical</id>
+			<repositories>
+				<repository>
+					<id>libs-critical-snapshot-local</id>
+					<name>libs-critical-snapshot-local</name>
+					<url>http://192.168.99.100:8081/artifactory/list/libs-critical-snapshot-local/</url>
+				</repository>
+				<repository>
+					<id>ext-release-local</id>
+					<name>ext-release-local</name>
+					<url>http://192.168.99.100:8081/artifactory/list/ext-release-local/</url>
+				</repository>
+			</repositories>
+		</profile>
+		<profile>
+			<id>production</id>
+			<repositories>
+				<repository>
+					<id>libs-release-local</id>
+					<name>libs-release-local</name>
+					<url>http://192.168.99.100:8081/artifactory/list/libs-release-local/</url>
+				</repository>
+				<repository>
+					<id>ext-release-local</id>
+					<name>ext-release-local</name>
+					<url>http://192.168.99.100:8081/artifactory/list/ext-release-local/</url>
+				</repository>
+			</repositories>
+		</profile>
+	</profiles>
 </project>

@@ -1,5 +1,12 @@
 /temp
 .project
+/app/.settings
+/app/bin
 /app/.m2
 /app/.project
 /app/temp
+/app/alpha
+/app/beta
+/app/rc
+/app/production
+/app/critical
